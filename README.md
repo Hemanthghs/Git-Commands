@@ -189,6 +189,7 @@ This command will download the changes from the remote repository to the local r
 
 ## git pull
 This command is combination of git fetch and git merge commands.
+git pull = git fetch + git merge
 This command will download the changes from the remote repository to the local repo and will merge the change with the local branch. There is a chances for merge conflicts.
 
     git pull
@@ -245,7 +246,6 @@ This command is used to change the base of the branch from https://hackmd.io/InP
 
     git rebase <base-branch-name>
     
-
     
 ## git squash
 Squash is the technique that is used to group the multiple commits into a single commit.
@@ -275,6 +275,8 @@ This command is used to tag a commit and tag can be refered in future. A branch 
 **To push a specific tag to remote repo**
     
     git push origin <tag-name>
+
+
 
 
 
