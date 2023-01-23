@@ -136,6 +136,15 @@ This command is used to merge the another branch with the current branch. The co
 
     git merge <branch-name>
 
+## git clone
+This command is used to download the remote repository to the local system.
+
+    git clone <remote-repo-url>
+
+**To clone a specific branch from the remote repo**
+
+    git clone -b <branch-name> <remote-repo-url>
+
 ## git remote
 This command is used add the URLs of the remote repositories.
 
@@ -143,7 +152,7 @@ This command is used add the URLs of the remote repositories.
     
     Ex: git remote add origin https://github.com/Hemanthghs/gRPC-Protobuf-with-Golang.git
     
-    
+
 
 ## git push
 This command is used to push a specific branch from the local repository to the remote repository
@@ -186,6 +195,86 @@ This command will download the changes from the remote repository to the local r
 
 
 ## git stash
+This command is used to switch the branch without making a commit. 
+
+**To add stash the changes**
+    
+    git stash
+
+**To get back the changes**
+
+    git stash apply
+
+**To remove all the stashes **
+
+    git stash clear
+
+**To remove most recent stash**
+    
+    git stash drop
+
+## git revert
+This command is used to undo the changes made by a  particular commit. Revert will undo the changes but it will not delete the changes from the repo, instead it will create a new commit for the each revert operation.
+
+    git revert <commit-id>
+    
+## git reset
+This command is used to undo the changes. This will reset the current state of the HEAD to any specific state.
+
+    git reset <commit id>
+
+## git rm
+This is used to delete a file or files from the repository.
+    
+    git rm <file-name>
+
+The changes made by rm command are not permanent they can be reverted back.
+
+**To revert the rm command**
+
+    git reset --hard
+
+## git rm --cached
+This command is used to delete the file form git, but to preserve the file in the local system
+
+    git rm --cached
+
+
+## git rebase
+This command is used to change the base of the branch from https://hackmd.io/InPw2IiCTI-CYTubzJx7VQ?both#one commit to another commit. All the changes that are made in the base branch will be reflected in the current branch.
+
+    git rebase <base-branch-name>
+    
+
+    
+## git squash
+Squash is the technique that is used to group the multiple commits into a single commit.
+
+**To group last 5 commits into single commit**
+    
+    git rebase -i HEAD~5
+
+Next in the interactive editor change the **pick** keyword to **squash** and save it.
+In the next editor write a single commit message.
+
+## git tag
+This command is used to tag a commit and tag can be refered in future. A branch can have any number of tags. Tags can be names of the versions.
+    
+**To create a tag**
+
+    git tag <tag-name>
+    
+**To list the tag names**
+
+    git tag
+
+**To view the the repository at a particular tag**
+
+    git show <tag-name>
+
+**To push a specific tag to remote repo**
+    
+    git push origin <tag-name>
 
 
 
